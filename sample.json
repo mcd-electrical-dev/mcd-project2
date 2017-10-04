@@ -1,0 +1,110 @@
+{
+    "id": 1012,
+    "brandId": 78,
+    "productTypeId": 1,
+    "identity": {
+        "sku": "459309A",
+        "isbn": "B00D2SH83E",
+        "ean": "5015135395933",
+        "barcode": "5015135395933"
+    },
+    "productGroupId": 0,
+    "stock": {
+        "stockTracked": true,
+        "weight": {
+            "magnitude": 690
+        },
+        "dimensions": {
+            "length": 102,
+            "height": 175,
+            "width": 165,
+            "volume": 2945250
+        }
+    },
+    "financialDetails": {
+        "taxable": false,
+        "taxCode": {
+            "id": 7,
+            "code": "T20"
+        }
+    },
+    "salesChannels": [
+        {
+            "salesChannelName": "Brightpearl",
+            "productName": "Airvent 459309A Axial Extractor Fan with Auto Shutters 100 mm / 4 Inch  and Timer",
+            "productCondition": "new",
+            "categories": [
+                {
+                    "categoryCode": "830"
+                }
+            ],
+            "description": {
+                "languageCode": "en",
+                "text": "<h2>AirVent Axial Toilet and Bathroom Fan 100mm with Shutters and Timer 459309A</h2><ul class=\"a-vertical a-spacing-none\"><li><span class=\"a-list-item\">Automatic slow opening / closing backdraught shutter built in</span></li><li><span class=\"a-list-item\">24 litres per second, 88 cubic metres per hour extraction rate</span></li><li><span class=\"a-list-item\">20W power consumption</span></li><li><span class=\"a-list-item\">Sound output 32dB(A) @ 3m</span></li><li><span class=\"a-list-item\">Dimensions: 156mm wide x 156mm high x 42mm deep. 99mm diameter spigot, extends for 53mm</span></li></ul>",
+                "format": "HTML_FRAGMENT"
+            },
+            "shortDescription": {
+                "languageCode": "en",
+                "text": "<p>AirVent Axial Toilet and Bathroom Fan 100mm with Shutters and Timer 459309A</p>",
+                "format": "HTML_FRAGMENT"
+            }
+        },
+        {
+            "id": 5,
+            "salesChannelName": "Electraders",
+            "productName": "Airvent 459309A Axial Extractor Fan with Auto Shutters 100 mm / 4 Inch  and Timer",
+            "productCondition": "new",
+            "categories": [
+                {
+                    "categoryCode": "830"
+                }
+            ],
+            "description": {
+                "languageCode": "en",
+                "text": "<h2>AirVent Axial Toilet and Bathroom Fan 100mm with Shutters and Timer 459309A</h2><ul class=\"a-vertical a-spacing-none\"><li><span class=\"a-list-item\">Automatic slow opening / closing backdraught shutter built in</span></li><li><span class=\"a-list-item\">24 litres per second, 88 cubic metres per hour extraction rate</span></li><li><span class=\"a-list-item\">20W power consumption</span></li><li><span class=\"a-list-item\">Sound output 32dB(A) @ 3m</span></li><li><span class=\"a-list-item\">Dimensions: 156mm wide x 156mm high x 42mm deep. 99mm diameter spigot, extends for 53mm</span></li></ul>",
+                "format": "HTML_FRAGMENT"
+            },
+            "shortDescription": {
+                "languageCode": "en",
+                "text": "<p>AirVent Axial Toilet and Bathroom Fan 100mm with Shutters and Timer 459309A</p>",
+                "format": "HTML_FRAGMENT"
+            },
+            "availableToSellOnChannel": true,
+            "sellWhenNoStock": false
+        }
+    ],
+    "composition": {
+        "bundle": false
+    },
+    "createdOn": "2014-02-27T20:24:18.000Z",
+    "updatedOn": "2017-06-30T11:00:42.000+01:00",
+    "warehouses": {
+        "2": {
+            "defaultLocationId": 334,
+            "overflowLocationId": 0,
+            "reorderLevel": 6,
+            "reorderQuantity": 10
+        },
+        "3": {
+            "defaultLocationId": 0,
+            "overflowLocationId": 0,
+            "reorderLevel": 1,
+            "reorderQuantity": 0
+        },
+        "4": {
+            "defaultLocationId": 0,
+            "overflowLocationId": 0,
+            "reorderLevel": 1,
+            "reorderQuantity": 1
+        }
+    },
+    "nominalCodeStock": "1001",
+    "nominalCodePurchases": "5000",
+    "nominalCodeSales": "4000",
+    "seasonIds": [
+        1
+    ],
+    "reporting": {},
+    "primarySupplierId": 346,
+    "status": "LIVE"
+}

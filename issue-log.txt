@@ -1,0 +1,5 @@
+
+
+#1 Cannot find a 'UPC' field within the api. Does not appear to be filled in the report either.
+#2 Reorder level and reorder quantity is only taken from 1 first warehouse in the list wiht warehouse ID 2 - maps to a Lanarkshire warehouse (same as original report)
+#3 Still getting timeouts --try a wait loop

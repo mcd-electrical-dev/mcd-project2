@@ -1,0 +1,28 @@
+Product ID			-product				\/
+SKU				-product				\/
+Name				-product				\/
+Created date			-product				\/
+Brand				-brand <= product[0].brandId		\/
+Categories			-product	categoryCode??		\/
+Type						productTypeId??		\/
+Bundle?				-product				\/
+Stock-tracked			-product				\/
+Status				-product				\/
+UPC						??			\/
+ISBN				-product				\/
+EAN				-product				\/
+Barcode				-product				\/
+Seasons				-product	seasonId??
+Sales popup message				??
+Warehouse popup message				??
+Tax Code			-product
+Weight				-product
+Height				-product
+Width				-product
+Length				-product
+Primary Supplier Company	-product
+All suppliers					??
+Short description		-product
+Long Description		-product
+Reorder Level			-product <= response[0].warehouses
+Reorder QTY			-product <= response[0].warehouses
