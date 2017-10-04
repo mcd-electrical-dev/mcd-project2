@@ -15,7 +15,7 @@ currentTime = "product_report_" + JSON.stringify(currentTime).substring(1, 19).r
 
 var path = __dirname + "\\client-data\\" + currentTime + ".csv";
 
-var headers = "Product ID,SKU,Product Name,Created Date,Brand,Categories,Type ID,Bundle,Stock Tracked,Status,UPC,ISBN,EAN,Barcode,Seasons,Sales popup message,Warehouse popup message,Tax Code,Weight,Height,Width,Length,Primary Supplier Company,All suppliers,Short Description,Long Description,Reorder Level,Reorder Quantity,dummy";
+var headers = "Product ID,SKU,Product Name,Created Date,Brand,Categories,Type ID,Bundle,Stock Tracked,Status,UPC,ISBN,EAN,Barcode,Seasons,Sales popup message,Warehouse popup message,Tax Code,Weight,Height,Width,Length,Primary Supplier Company,All suppliers,Short Description,Long Description,Reorder Level,Reorder Quantity";
 
 
 function startDataPull() {

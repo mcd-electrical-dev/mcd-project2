@@ -4,7 +4,7 @@
   "description": "product data loader from brightpearl api",
   "main": "product-data-extractor.js",
   "scripts": {
-    "start": "nodemon ./server/server.js"
+    "start": "nodemon ./server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "express": "^4.15.4",
     "express-basic-auth": "^1.1.2",
     "mongoose": "^4.11.11",
+    "nodemon": "^1.12.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "promise": "^8.0.1",
