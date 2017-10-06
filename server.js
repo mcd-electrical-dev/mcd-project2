@@ -1,7 +1,7 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var productDataExtractor = require(__dirname + '\\server\\product-data-extractor');
+var productDataExtractor = require(__dirname + '/server/product-data-extractor');
 var serveIndex = require('serve-index');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
