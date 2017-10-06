@@ -2,6 +2,7 @@ const Brightpearl = require('brightpearl');
 const csv = require('csv');
 const fs = require('fs');
 const credentials = require('./brightpearl-credential');
+const path = require('path');
 
 module.exports = {
     startDataPull: startDataPull
@@ -13,14 +14,14 @@ var bp = Brightpearl(credentials.getDatacenter(), credentials.getAccountId(), cr
 var currentTime = new Date();
 currentTime = "product_report_" + JSON.stringify(currentTime).substring(1, 19).replace(/T/g, "_").replace(/:/g, "-");
 
-var path = __dirname + "\\client-data\\" + currentTime + ".csv";
+var link = path.join(__dirname + "client-data",currentTime)+ ".csv";
 
 var headers = "Product ID,SKU,Product Name,Created Date,Brand,Categories,Type ID,Bundle,Stock Tracked,Status,UPC,ISBN,EAN,Barcode,Seasons,Sales popup message,Warehouse popup message,Tax Code,Weight,Height,Width,Length,Primary Supplier Company,All suppliers,Short Description,Long Description,Reorder Level,Reorder Quantity";
 
 
 function startDataPull() {
     clearOldFiles();
-    createCSV(path, headers);
+    createCSV(link, headers);
     pullProductUris();
 }
 
@@ -46,9 +47,9 @@ function pullProductUris() {
 }
 
 function clearOldFiles() {
-    fs.readdir('./server/client-data', (err, files) => {
+    fs.readdir(path.join('./server','client-data'), (err, files) => {
         files.forEach(file => {
-            fs.unlinkSync(__dirname + "\\client-data\\" + file, (err) => {
+            fs.unlinkSync(path.join(__dirname,'client-data',file), (err) => {
                 if (err) {
                     console.log("failed to delete local image:" + err);
                 } else {
@@ -61,8 +62,8 @@ function clearOldFiles() {
 
 }
 
-function createCSV(path, headers) {
-    fs.writeFileSync(path, headers, function (error) {
+function createCSV(link, headers) {
+    fs.writeFileSync(link, headers, function (error) {
         if (error) {
             console.error("write error:  " + error.message);
         }
@@ -159,7 +160,7 @@ function getCategoryName(categoryId) {
 
 
 function appendToCSV() {
-    fs.appendFileSync(path, nextLine, function (error) {
+    fs.appendFileSync(link, nextLine, function (error) {
         if (error) {
             console.error("write error:  " + error.message);
         }

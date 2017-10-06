@@ -1,10 +1,11 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var productDataExtractor = require(__dirname + '/server/product-data-extractor');
 var serveIndex = require('serve-index');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+const path = require('path');
+var productDataExtractor = require(path.join(__dirname,'server','product-data-extractor.js'));
 
 
 app.use(bodyParser.json());
@@ -12,17 +13,17 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.use('/home', express.static(__dirname + '/client/'));
+app.use('/home', express.static(path.join(__dirname,'client')));
 
 app.get('/home', function (req, res) {
-     res.sendFile(__dirname + '\\client\\download.html');
+     res.sendFile(path.join(__dirname,'client','download.html'));
 });
 
-app.use(express.static(__dirname + 'server/client-data'));
-app.use('/client-data', serveIndex(__dirname + 'server/client-data'));
+app.use(express.static(path.join(__dirname,'server/client-data')));
+app.use('/client-data', serveIndex(path.join(__dirname,'server/client-data')));
 
 
-
+//productDataExtractor.startDataPull;
 setInterval(setDownloadPathCallback, 500);
 //reproduce the excel every 8 hours
 setInterval(productDataExtractor.startDataPull, 28800000);
@@ -34,12 +35,12 @@ function setDownloadPathCallback() {
 
     var fileName = "";
 
-    fs.readdir(__dirname + '/server/client-data', (err, files) => {
+    fs.readdir(path.join(__dirname,'/server/client-data'), (err, files) => {
         fileName = files[0];
     })
 
     app.get('/downloadit', function (req, res) {
-        var file = __dirname + '/server/client-data/' + fileName;
+        var file = path.join(__dirname,'server','client-data',fileName);
         res.download(file);
     });
 }
