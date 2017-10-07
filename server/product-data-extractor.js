@@ -14,14 +14,14 @@ var bp = Brightpearl(credentials.getDatacenter(), credentials.getAccountId(), cr
 var currentTime = new Date();
 currentTime = "product_report_" + JSON.stringify(currentTime).substring(1, 19).replace(/T/g, "_").replace(/:/g, "-");
 
-var link = path.join(__dirname + "client-data",currentTime)+ ".csv";
-
+var linka = __dirname + "\\client-data\\" + currentTime + ".csv";
+console.log(linka);
 var headers = "Product ID,SKU,Product Name,Created Date,Brand,Categories,Type ID,Bundle,Stock Tracked,Status,UPC,ISBN,EAN,Barcode,Seasons,Sales popup message,Warehouse popup message,Tax Code,Weight,Height,Width,Length,Primary Supplier Company,All suppliers,Short Description,Long Description,Reorder Level,Reorder Quantity";
-
+console.log(headers);
 
 function startDataPull() {
     clearOldFiles();
-    createCSV(link, headers);
+    createCSV(linka, headers);
     pullProductUris();
 }
 
@@ -62,8 +62,8 @@ function clearOldFiles() {
 
 }
 
-function createCSV(link, headers) {
-    fs.writeFileSync(link, headers, function (error) {
+function createCSV(linka, headers) {
+    fs.writeFile(linka, headers, function (error) {
         if (error) {
             console.error("write error:  " + error.message);
         }
@@ -160,7 +160,7 @@ function getCategoryName(categoryId) {
 
 
 function appendToCSV() {
-    fs.appendFileSync(link, nextLine, function (error) {
+    fs.appendFile(linka, nextLine, function (error) {
         if (error) {
             console.error("write error:  " + error.message);
         }

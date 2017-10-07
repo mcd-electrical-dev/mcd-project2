@@ -22,7 +22,7 @@ app.get('/home', function (req, res) {
 app.use(express.static(path.join(__dirname,'server/client-data')));
 app.use('/client-data', serveIndex(path.join(__dirname,'server/client-data')));
 
-
+productDataExtractor.startDataPull();
 //productDataExtractor.startDataPull;
 setInterval(setDownloadPathCallback, 500);
 //reproduce the excel every 8 hours
