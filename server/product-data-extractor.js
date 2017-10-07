@@ -63,11 +63,7 @@ function clearOldFiles() {
 }
 
 function createCSV(linka, headers) {
-    fs.writeFile(linka, headers, function (error) {
-        if (error) {
-            console.error("write error:  " + error.message);
-        }
-    });
+    fs.writeFileSync(linka, headers);
 }
 
 function getProduct(product) {
@@ -160,11 +156,7 @@ function getCategoryName(categoryId) {
 
 
 function appendToCSV() {
-    fs.appendFile(linka, nextLine, function (error) {
-        if (error) {
-            console.error("write error:  " + error.message);
-        }
-    });
+    fs.appendFileSync(linka, nextLine);
 }
 
 
