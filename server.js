@@ -35,7 +35,7 @@ function setDownloadPathCallback() {
 
     var fileName = "";
 
-    fs.readdir(path.join(__dirname,'/server/client-data'), (err, files) => {
+    fs.readdir(path.join(__dirname,'server','client-data'), (err, files) => {
         fileName = files[0];
     })
 
