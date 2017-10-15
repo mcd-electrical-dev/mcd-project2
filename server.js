@@ -19,8 +19,8 @@ app.get('/home', function (req, res) {
      res.sendFile(path.join(__dirname,'client','download.html'));
 });
 
-app.use(express.static(path.join(__dirname,'server/client-data')));
-app.use('/client-data', serveIndex(path.join(__dirname,'server/client-data')));
+app.use(express.static(path.join(__dirname,'server','client-data')));
+app.use('/client-data', serveIndex(path.join(__dirname,'server','client-data')));
 
 productDataExtractor.startDataPull();
 //productDataExtractor.startDataPull;
